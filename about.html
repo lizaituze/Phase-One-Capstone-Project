@@ -1,8 +1,12 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="en">
 
 <head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width,initial-scale=1">
 
 <title>
 
@@ -12,11 +16,62 @@ About
 
 <script src="https://cdn.tailwindcss.com"></script>
 
+<link rel="stylesheet"
+href="./css/style.css">
+
 </head>
 
-<body class="p-10">
+<body>
 
-<h1 class="text-4xl">
+<nav class="
+bg-slate-900
+text-white
+px-8
+py-5
+flex
+justify-between
+items-center
+">
+
+<h1 class="text-3xl font-bold">
+
+📚 Book Explorer
+
+</h1>
+
+<div class="space-x-6">
+
+<a
+href="index.html"
+class="hover:text-yellow-400 transition">
+
+Home
+
+</a>
+
+<a
+href="favorites.html"
+class="hover:text-yellow-400 transition">
+
+Favorites
+
+</a>
+
+<a
+href="about.html"
+class="hover:text-yellow-400 transition">
+
+About
+
+</a>
+
+</div>
+
+</nav>
+
+<section class="pageHeader">
+
+<h1>
 
 About Book Explorer
 
@@ -24,15 +79,91 @@ About Book Explorer
 
 <p>
 
-Browse books
-
-Search books
-
-Save favorites
-
-Store locally
+Explore books and build your own library
 
 </p>
+
+</section>
+
+<section class="p-12">
+
+<div class="grid md:grid-cols-3 gap-8">
+
+<div class="card">
+
+<div class="text-5xl">
+
+📚
+
+</div>
+
+<h2>
+
+Browse Books
+
+</h2>
+
+<p>
+
+Explore thousands of titles
+
+</p>
+
+</div>
+
+<div class="card">
+
+<div class="text-5xl">
+
+🔍
+
+</div>
+
+<h2>
+
+Search
+
+</h2>
+
+<p>
+
+Find books instantly
+
+</p>
+
+</div>
+
+<div class="card">
+
+<div class="text-5xl">
+
+❤️
+
+</div>
+
+<h2>
+
+Favorites
+
+</h2>
+
+<p>
+
+Save books locally
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+Book Explorer © 2026
+
+</footer>
 
 </body>
 

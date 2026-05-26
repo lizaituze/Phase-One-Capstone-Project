@@ -1,30 +1,42 @@
-import {
-fetchBooks
-}
+import { fetchBooks } from "./fetchBooks.js";
+import { displayBooks } from "./ui.js";
 
-from "./fetchBooks.js";
+async function loadBooks(){
 
-import {
-displayBooks
-}
+const container =
+document.getElementById(
+"booksContainer"
+);
 
-from "./ui.js";
+container.innerHTML = `
 
-async function load(){
+<div class="
+col-span-4
+text-center
+text-2xl
+">
+
+Loading books...
+
+</div>
+
+`;
 
 const books =
-await fetchBooks();
+await fetchBooks(
+"programming"
+);
 
 displayBooks(
 books.slice(
 0,
-12
+16
 )
 );
 
 }
 
-load();
+loadBooks();
 
 document
 .getElementById(
@@ -42,7 +54,12 @@ document
 "searchInput"
 )
 
-.value;
+.value
+.trim();
+
+if(
+!search
+)return;
 
 const books =
 await fetchBooks(
@@ -50,7 +67,10 @@ search
 );
 
 displayBooks(
-books
+books.slice(
+0,
+20
+)
 );
 
 }

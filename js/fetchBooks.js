@@ -2,7 +2,7 @@ const URL =
 "https://openlibrary.org/search.json?q=";
 
 export async function fetchBooks(
-search="programming"
+search = "programming"
 ){
 
 try{
@@ -21,7 +21,9 @@ return data.docs;
 
 catch(error){
 
-console.log(error);
+console.log(
+error
+);
 
 return [];
 
