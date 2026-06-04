@@ -1,148 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport"
-content="width=device-width,initial-scale=1">
+content="width=device-width, initial-scale=1.0">
 
 <title>Book Explorer</title>
 
 <script src="https://cdn.tailwindcss.com"></script>
 
+<link rel="stylesheet"
+href="./css/style.css">
+
 </head>
 
 <body class="bg-gray-100">
 
-<nav class="bg-blue-600 text-white p-4 flex justify-between">
+<nav class="bg-slate-900 text-white px-8 py-5 flex justify-between items-center">
 
-<h1 class="text-2xl font-bold">
-Book Explorer
+<h1 class="text-3xl font-bold">
+
+📚 Book Explorer
+
 </h1>
 
-<div>
+<div class="space-x-6">
 
-<a href="index.html" class="mr-4">
-Home
-</a>
+<a href="index.html">Home</a>
 
-<a href="favorites.html" class="mr-4">
+<a href="favorites.html">
+
 Favorites
+
 </a>
 
 <a href="about.html">
+
 About
+
 </a>
 
 </div>
 
 </nav>
 
-<section class="text-center p-10">
+<section class="
+hero
+text-center
+text-white
+py-32">
 
-<h2 class="text-4xl font-bold">
-Discover Books
-</h2>
+<div class="overlay"></div>
 
-<p class="mt-4">
-Search and save your favorite books
+<div class="relative z-10">
+
+<h1 class="text-6xl font-bold">
+
+Discover Your Next Book
+
+</h1>
+
+<p class="mt-5 text-xl">
+
+Explore thousands of books instantly
+
 </p>
+
+<div class="mt-8">
 
 <input
 id="searchInput"
-type="text"
-placeholder="Search books"
-class="border p-2 mt-5">
+
+placeholder="Search books..."
+
+class="
+p-4
+rounded-xl
+text-black
+w-80
+">
 
 <button
 id="searchBtn"
-class="bg-blue-500 text-white p-2">
+
+class="
+bg-yellow-400
+text-black
+px-6
+py-4
+rounded-xl
+ml-2
+font-bold
+">
 
 Search
 
 </button>
 
+</div>
+
+</div>
+
 </section>
+
+<section class="p-10">
 
 <div
 id="booksContainer"
-class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 p-6">
 
-<div class="bg-white shadow p-4 rounded">
-
-<h3 class="text-xl font-bold">
-
-Book Title
-
-</h3>
-
-<p>
-
-Author Name
-
-</p>
+class="
+grid
+grid-cols-1
+sm:grid-cols-2
+lg:grid-cols-4
+gap-8
+">
 
 </div>
 
-<div class="bg-white shadow p-4 rounded">
+</section>
 
-<h3 class="text-xl font-bold">
+<footer>
 
-Book Title
-
-</h3>
-
-<p>
-
-Author Name
-
-</p>
-
-</div>
-
-<div class="bg-white shadow p-4 rounded">
-
-<h3 class="text-xl font-bold">
-
-Book Title
-
-</h3>
-
-<p>
-
-Author Name
-
-</p>
-
-</div>
-
-<div class="bg-white shadow p-4 rounded">
-
-<h3 class="text-xl font-bold">
-
-Book Title
-
-</h3>
-
-<p>
-
-Author Name
-
-</p>
-
-</div>
-
-</div>
-
-<footer class="bg-blue-600 text-white text-center p-4">
-
-Book Explorer 2026
+Book Explorer © 2026
 
 </footer>
 
-<script type="module"
+<script
+type="module"
 src="./js/app.js">
 
 </script>
 
 </body>
+
 </html>

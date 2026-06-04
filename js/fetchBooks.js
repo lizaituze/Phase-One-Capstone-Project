@@ -1,15 +1,15 @@
-const API =
+const URL =
 "https://openlibrary.org/search.json?q=";
 
 export async function fetchBooks(
-search="programming"
+search = "programming"
 ){
 
 try{
 
 const response =
 await fetch(
-`${API}${search}`
+URL + search
 );
 
 const data =
@@ -21,7 +21,9 @@ return data.docs;
 
 catch(error){
 
-console.log(error);
+console.log(
+error
+);
 
 return [];
 

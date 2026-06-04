@@ -1,43 +1,78 @@
-import { fetchBooks }
-from "./fetchBooks.js";
-
-import { renderBooks }
-from "./ui.js";
+import { fetchBooks } from "./fetchBooks.js";
+import { displayBooks } from "./ui.js";
 
 async function loadBooks(){
 
-const books =
-await fetchBooks();
+const container =
+document.getElementById(
+"booksContainer"
+);
 
-renderBooks(
-books.slice(0,12)
+container.innerHTML = `
+
+<div class="
+col-span-4
+text-center
+text-2xl
+">
+
+Loading books...
+
+</div>
+
+`;
+
+const books =
+await fetchBooks(
+"programming"
+);
+
+displayBooks(
+books.slice(
+0,
+16
+)
 );
 
 }
 
 loadBooks();
 
-const searchBtn =
-document.getElementById(
+document
+.getElementById(
 "searchBtn"
-);
+)
 
-searchBtn.addEventListener(
+.addEventListener(
 "click",
-async ()=>{
 
-const value =
-document.getElementById(
+async()=>{
+
+const search =
+document
+.getElementById(
 "searchInput"
-).value;
+)
+
+.value
+.trim();
+
+if(
+!search
+)return;
 
 const books =
 await fetchBooks(
-value
+search
 );
 
-renderBooks(
-books
+displayBooks(
+books.slice(
+0,
+20
+)
 );
 
-});
+}
+
+);
